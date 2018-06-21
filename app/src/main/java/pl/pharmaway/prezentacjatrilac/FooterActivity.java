@@ -127,16 +127,17 @@ public abstract class FooterActivity extends AppCompatActivity {
     }
 
     protected long getDelay() {
-        return 500;
+        return 5;
     }
 
     protected long getDuration() {
-        return 1500;
+        return 15;
     }
 
-    protected Cancelable animateInCombined(final long initialDelay, final Object[]... combined) {
-        final long delay = getDelay();
-        final long duration = getDuration();
+    protected Cancelable animateInCombined(long initialDelay2, final Object[]... combined) {
+        final long initialDelay = 0;
+        final long delay = 0;//getDelay();
+        final long duration = 0;//getDuration();
 
         final List<ViewPropertyAnimator> animations = new ArrayList<>();
 

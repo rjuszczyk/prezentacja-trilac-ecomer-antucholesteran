@@ -37,6 +37,14 @@ public class Page4 extends FooterFragment {
                     p2_3
             );
         }
+
+        view.findViewById(R.id.button_sg).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Page0.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

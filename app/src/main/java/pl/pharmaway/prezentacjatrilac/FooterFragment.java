@@ -67,9 +67,10 @@ public abstract class FooterFragment extends Fragment {
         }
     }
 
-    protected CancelableDuration animateInCombined(final long initialDelay, final Object[]... combined) {
-        final long delay = getDelay();
-        final long duration = getDuration();
+    protected CancelableDuration animateInCombined(final long initialDelay2, final Object[]... combined) {
+        final long initialDelay = 0;
+        final long delay = 0;//getDelay();
+        final long duration = 0;//getDuration();
 
         final List<ViewPropertyAnimator> animations = new ArrayList<>();
 
@@ -152,8 +153,9 @@ public abstract class FooterFragment extends Fragment {
     }
 
     protected Cancelable animateIn(long initialDelay, AnimationOperator animationOpeartor, View... paragraphs) {
-        long delay = getDelay();
-        long duration = getDuration();
+        initialDelay = 0;
+        long delay = 0;//getDelay();
+        long duration = 0;//getDuration();
 
         final List<ViewPropertyAnimator> animations = new ArrayList<>();
 

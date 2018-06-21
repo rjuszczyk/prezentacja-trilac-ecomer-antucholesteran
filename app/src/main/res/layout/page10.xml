@@ -45,5 +45,14 @@
         android:layout_gravity="right|center_vertical"
         android:layout_marginRight="50dp"
         />
+
+    <pl.pharmaway.prezentacjatrilac.view.FixedImageView
+        android:id="@+id/button_sg"
+        android:layout_width="300dp"
+        android:layout_height="190dp"
+
+
+        android:layout_gravity="left|bottom"
+        />
     <include layout="@layout/footer" />
 </pl.pharmaway.prezentacjatrilac.view.FixedScaledLayout>

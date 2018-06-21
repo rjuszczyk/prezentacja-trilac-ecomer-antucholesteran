@@ -1,5 +1,6 @@
 package pl.pharmaway.prezentacjatrilac;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -36,6 +37,14 @@ public class Page10 extends FooterFragment {
                     item3
             );
         }
+
+        view.findViewById(R.id.button_sg).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Page0.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
