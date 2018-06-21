@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pl.pharmaway.prezentacjatrilac.view.FixedScaledLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:fixedWidth="1920dp"
+    app:fixedHeight="1200dp"
+    >
+
+    <pl.pharmaway.prezentacjatrilac.view.FixedImageView
+        android:layout_width="1920dp"
+        android:layout_height="1200dp"
+        app:imageReference="@drawable/page4bg"
+        />
+
+    <pl.pharmaway.prezentacjatrilac.view.FixedImageView
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="281dp"
+        android:layout_width="1095dp"
+        android:layout_height="242dp"
+        app:imageReference="@drawable/p4_1"
+        android:id="@+id/p4_1"
+        />
+
+    <pl.pharmaway.prezentacjatrilac.view.FixedImageView
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="511dp"
+        android:layout_width="1419dp"
+        android:layout_height="128dp"
+        app:imageReference="@drawable/p4_2"
+        android:id="@+id/p4_2"
+        />
+
+
+    <pl.pharmaway.prezentacjatrilac.view.FixedImageView
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="661dp"
+        android:layout_width="1921dp"
+        android:layout_height="362dp"
+        app:imageReference="@drawable/p4_3"
+        android:id="@+id/p4_3"
+        />
+
+    <pl.pharmaway.prezentacjatrilac.view.FixedImageView
+        android:id="@+id/button_prev"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="left|bottom"
+        />
+
+    <pl.pharmaway.prezentacjatrilac.view.FixedImageView
+        android:id="@+id/button_next"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="right|bottom"
+        />
+</pl.pharmaway.prezentacjatrilac.view.FixedScaledLayout>
