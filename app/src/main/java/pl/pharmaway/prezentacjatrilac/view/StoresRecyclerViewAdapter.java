@@ -30,7 +30,10 @@ public abstract class StoresRecyclerViewAdapter extends RecyclerView.Adapter<Sto
     public StoresRecyclerViewAdapter(List<DataRow> stores) {
         mStores.clear();
         mStoresCache.clear();
-        Collections.sort(stores, getRowComparator());
+        Comparator<DataRow> comparator = getRowComparator();
+        if(comparator != null) {
+            Collections.sort(stores, comparator);
+        }
         mStores.addAll(stores);
         mStoresCache.addAll(mStores);
     }
@@ -114,7 +117,10 @@ public abstract class StoresRecyclerViewAdapter extends RecyclerView.Adapter<Sto
     public void setStores(List<DataRow> stores) {
         mStores.clear();
         mStoresCache.clear();
-        Collections.sort(stores, getRowComparator());
+        Comparator<DataRow> comparator = getRowComparator();
+        if(comparator != null) {
+            Collections.sort(stores, comparator);
+        }
         mStores.addAll(stores);
         mStoresCache.addAll(mStores);
         notifyDataSetChanged();

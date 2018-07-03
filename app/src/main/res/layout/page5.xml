@@ -31,4 +31,14 @@
 
         android:layout_gravity="right|center_vertical"
         />
+
+    <pl.pharmaway.prezentacjatrilac.view.FixedImageView
+        android:id="@+id/button_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:imageReference="@drawable/back"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="50dp"
+        />
 </pl.pharmaway.prezentacjatrilac.view.FixedScaledLayout>

@@ -4,57 +4,56 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import java.util.Arrays;
 import java.util.List;
 
-import pl.pharmaway.prezentacjatrilac.Constants;
 import pl.pharmaway.prezentacjatrilac.database.DataRow;
 import pl.pharmaway.prezentacjatrilac.database.DatabaseHelper;
 
-public class ChooseLekarzDialog extends ChooseElementDialog{
+public class ChooseMiastoDialog extends ChooseElementDialog{
 
-    private String lekarz;
+    private String pm;
 
     @Override
     public String getRowText(DataRow row) {
-        return row.lekarz;
+        return row.m;
     }
 
-    public static ChooseLekarzDialog create(
-            String lekarz) {
-        ChooseLekarzDialog dialog = new ChooseLekarzDialog();
+    public static ChooseMiastoDialog create(String pm) {
+        ChooseMiastoDialog dialog = new ChooseMiastoDialog();
         Bundle arguments = new Bundle();
-        arguments.putString("lekarz", lekarz);
+        arguments.putString("pm", pm);
         dialog.setArguments(arguments);
         return dialog;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        lekarz = getArguments().getString("lekarz");
+        pm = getArguments().getString("pm");
 
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public List<DataRow> getRows(Context context) {
-        return DatabaseHelper.rowsForLekarzTypeAndAgent(Constants.LEKARZ_TYPE, lekarz, context);
+        return DatabaseHelper.miastoForPm(context, pm);
     }
 
     @Override
     public void onRowSelected(DataRow row) {
-        mLekarzDialogListener.onLekarzSelected(row.lekarz);
+        mLekarzDialogListener.onMiastoSelected(row.m);
     }
 
-    LekarzDialogListener mLekarzDialogListener;
+    MiastoDialogListener mLekarzDialogListener;
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if(context instanceof LekarzDialogListener) {
-            mLekarzDialogListener = (LekarzDialogListener) context;
+        if(context instanceof MiastoDialogListener) {
+            mLekarzDialogListener = (MiastoDialogListener) context;
         } else {
             throw new RuntimeException(context.getClass().getSimpleName() + " must implement "
-                    + LekarzDialogListener.class.getSimpleName());
+                    + MiastoDialogListener.class.getSimpleName());
         }
     }
 
@@ -64,7 +63,7 @@ public class ChooseLekarzDialog extends ChooseElementDialog{
         mLekarzDialogListener = null;
     }
 
-    public interface LekarzDialogListener {
-        void onLekarzSelected(String city);
+    public interface MiastoDialogListener {
+        void onMiastoSelected(String spec);
     }
 }
