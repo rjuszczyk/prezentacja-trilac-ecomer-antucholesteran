@@ -24,8 +24,13 @@ CREATE TABLE `prezentacja-trilac-ecomer-antucholesteran` (
   `createDate` varchar(255) DEFAULT NULL,
   `firstChoice` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-'$createDate',
-
-			'$timeInApp',
-			'$firstChoice'
+CREATE TABLE `prezentacja-trilac-plus-ecomer-junior-aquamer` (
+  `agent` varchar(255) DEFAULT NULL,
+  `spec` varchar(255) DEFAULT NULL,
+  `miasto` varchar(255) DEFAULT NULL,
+  `instytucja` varchar(255) DEFAULT NULL,
+  `timeInApp` varchar(255) DEFAULT NULL,
+  `serverDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `createDate` varchar(255) DEFAULT NULL,
+  `firstChoice` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
